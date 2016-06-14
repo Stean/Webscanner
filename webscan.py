@@ -57,7 +57,10 @@ if __name__ == "__main__":
                 if ("<title>FRITZ!Box</title>" in r.text):
                     additional_info += bcolors.FAIL + bcolors.BOLD + " -> FritzBox" + bcolors.ENDC
                 else:
-                    if (r.headers["server"]!=None):
-                        additional_info += " Server-Agent: '" + r.headers["server"] + "'"
+                    try:
+                        if (r.headers["server"]!=None):
+                            additional_info += " Server-Agent: '" + r.headers["server"] + "'"
+                    except KeyError:
+                        additional_info += " No server user-agent"
                     
             print("   -" + str(service) + additional_info)
