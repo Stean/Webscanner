@@ -4,7 +4,7 @@ import requests
 import sys
 
 #Fix requests SSL warnings (http://stackoverflow.com/questions/32650984/why-does-python-requests-ignore-the-verify-parameter)
-requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ":RC4-SHA"
+requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = "ALL"
 
 """
 Just a wrapper, which fixes an issue with the all_hosts listing
