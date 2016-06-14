@@ -7,7 +7,7 @@ This is a python3 script that not only searches for HTTP Servers, but also check
 #### Installation:
 ```
 apt-get install nmap python3-requests python3-pip
-pip-3.2 install python-nmap
+pip3 install python-nmap
 ```
 
 #### Usage:
